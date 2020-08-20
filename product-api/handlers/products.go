@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"../data"
+	"github.com/tduchars/goservcoffee/product-api/data"
 )
 
 type Products struct {

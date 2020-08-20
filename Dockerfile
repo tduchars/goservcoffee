@@ -1,8 +1,11 @@
-FROM golang:latest
+FROM golang:1.14
 
 LABEL maintainer="Tony Duchars <tony.duchars@gmail.com>"
 
-WORKDIR /goserv
+ENV GO111MODULE=on
+ENV GOFLAGS=-mod=vendor
+
+WORKDIR /goservcoffee
 
 COPY go.mod ./
 
@@ -12,4 +15,4 @@ COPY . .
 
 EXPOSE 9090
 
-CMD [ "go run ./product-api/main.go" ]
+CMD ["go", "run", "/goservcoffee/product-api/main.go"]

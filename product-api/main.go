@@ -8,7 +8,7 @@ import (
 	"os/signal"
 	"time"
 
-	"./handlers"
+	"github.com/tduchars/goservcoffee/product-api/handlers"
 )
 
 func main() {
